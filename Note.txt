@@ -1,0 +1,62 @@
+https://triyonos.com/pycharm-flask-opencv-face-recognition-registration-menggunakan-database-mysql
+https://triyonos.com/face-recognition-menggunakan-flask-opencv-mysql-dan-ajax
+https://v1study.com/python-tham-khao-nhan-dang-khuon-mat-voi-duoi-25-dong-ma-python.html#:~:text=H%C3%A0m%20detectMultiScale%20l%C3%A0%20m%E1%BB%99t%20h%C3%A0m,Th%E1%BB%A9%20hai%20l%C3%A0%20scaleFactor%20.
+https://plainenglish.io/blog/flask-crud-application-using-mvc-architecture **tách file theo mô hình MVC
+https://flask.palletsprojects.com/en/2.3.x/blueprints/ **module flask theo blueprint
+
+Một số hàm cơ bản của opencv
+cv2.rectangle:Vẽ 1 hình chữ nhật bao quanh khuôn mặt
+cv2.face.LBPHFaceRecognizer_create() :Tạo 1 đối tượng sử dụng hàm FaceRecognizer của opoencv 
+https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html **hiểu về cascade_classifier sử dụng trong opencv
+https://docs.opencv.org/3.4/dd/d65/classcv_1_1face_1_1FaceRecognizer.html#aa2d2f02faffab1bf01317ae6502fb631 **predict function trong opencv
+https://github.com/elyha7/yoloface  **yolo detect face
+
+
+Note:
+phiên bản flask,
+phiên bản python
+các thư viện sử dụng
+phiên bản opencv
+tải model face_detection 
+tải model yolo,weight của training face face_detection
+https://github.com/elyha7/yoloface **yolo for detect face
+https://viblo.asia/p/xay-dung-he-thong-real-time-multi-person-tracking-voi-yolov3-va-deepsort-gDVK2BVmKLj **yolo trong bài toán real-time tracking
+https://phamdinhkhanh.github.io/2020/03/09/DarknetAlgorithm.html **tìm hiểu sâu về yolo
+
+Danh sách thư viện kèm phiên bản:
+opencv:4.8
+flask:2.3.2
+python:3.11
+mysql_connector:8.0.33
+numpy
+PIL:9.5.0
+
+Hệ thống các bước làm của hệ thống detect face sử dụng opencv
+- Cap webcam
+- Chuyển từ rgb sang bgr
+- Lấy bộ dataset
+- Train qua hàm LBPHFaceRecognizer_create của opencv ra file XML
+- recognize cũng qua LBPHFaceRecognizer_create và đọc file XML của opencv(clf.read("classifier.xml"))
+
+
+//Python Note//
+"is" keyword thường sử dụng xem 2 biến có tham chiếu đến cùng đối tượng hay không,ko phải so sánh như toán tử ==
+None = null
+
+/////Nguyên lý hoạt động của opencv////
+-Opencv sử dụng các tầng(cascade) để độ chính xác nhận diện khuôn mặt được cải thiện
+-Bản thân các tầng chứa các tệp XML
+-confidence threshold:ngưỡng tối thiểu mà model coi là 1 dự đoán đúng
+
+
+pt = pytorch file
+
+detect trước,recognize sau dùng yolo
+tích hợp nốt yolo 
+cài đặt docker
+facenet
+https://viblo.asia/p/nhan-dien-khuon-mat-voi-mang-mtcnn-va-facenet-phan-1-Qbq5QDN4lD8 ***facenet
+
+bug nhận nhầm khuôn mặt
+https://miai.vn/2019/08/09/yolo-series-2-cach-train-yolo-de-detect-cac-object-dac-thu/ **yolo detect object
+https://images.cv/dataset/tree-image-classification-dataset
